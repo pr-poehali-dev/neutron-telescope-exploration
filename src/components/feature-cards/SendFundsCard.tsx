@@ -1,6 +1,6 @@
-import { Zap, Building2, ChevronDown, Info } from "lucide-react"
+import { Zap, ArrowUpRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { Switch } from "@/components/ui/switch"
-import { ArrowUpRight } from "lucide-react"
 
 export function SendFundsCard() {
   return (
@@ -9,56 +9,46 @@ export function SendFundsCard() {
         <Zap className="h-5 w-5 text-gray-400" />
       </div>
 
-      <h3 className="mb-2 text-lg font-semibold text-white">Мгновенные переводы</h3>
-      <p className="mb-4 text-sm text-gray-400">Платите клиентам, партнёрам и поставщикам за секунды без задержек</p>
+      <h3 className="mb-2 text-lg font-semibold text-white">Запись на показ в 1 клик</h3>
+      <p className="mb-4 text-sm text-gray-400">Персональный менеджер свяжется с вами менее чем за 3 минуты и подберёт удобное время</p>
 
       <a href="#" className="mb-6 inline-flex items-center text-sm text-gray-400 hover:text-white transition-colors">
-        Подробнее <ArrowUpRight className="ml-1 h-4 w-4" />
+        Смотреть доступные квартиры <ArrowUpRight className="ml-1 h-4 w-4" />
       </a>
 
       <div className="mt-auto space-y-4 rounded-xl bg-[#1a1a1a] border border-[#262626] p-4">
-        <div className="flex items-center justify-between rounded-lg bg-[#0f0f0f] border border-[#262626] px-3 py-2.5">
-          <div className="flex items-center gap-3">
-            <Building2 className="h-5 w-5 text-gray-500" />
-            <div>
-              <p className="text-sm font-medium text-white">Операционный счёт</p>
-              <p className="text-xs text-gray-500">Доступно: 1 500 000 ₽</p>
-            </div>
-          </div>
-          <ChevronDown className="h-4 w-4 text-gray-500" />
-        </div>
-
         <div>
-          <label className="mb-2 flex items-center gap-1 text-xs text-gray-400">
-            Введите сумму <Info className="h-3 w-3" />
-          </label>
+          <label className="mb-2 block text-xs text-gray-400">Ваш телефон</label>
           <div className="flex items-center rounded-lg bg-[#0f0f0f] border border-[#262626] px-3 py-2.5">
-            <span className="text-gray-500 mr-2">₽</span>
+            <span className="text-gray-500 mr-2 text-sm">+7</span>
             <input
               type="text"
-              placeholder="0,00"
+              placeholder="(000) 000-00-00"
               className="flex-1 bg-transparent text-white placeholder-gray-600 outline-none text-sm"
             />
           </div>
         </div>
 
         <div>
-          <label className="mb-2 flex items-center gap-1 text-xs text-gray-400">
-            Назначение платежа <span className="text-violet-400">*</span> (Необязательно)
+          <label className="mb-2 block text-xs text-gray-400">
+            Пожелания <span className="text-violet-400">*</span> (необязательно)
           </label>
           <div className="relative">
             <textarea
-              placeholder="Сообщение для получателя..."
+              placeholder="Например: 2-комнатная, до 10 млн, метро рядом..."
               className="w-full rounded-lg bg-[#0f0f0f] border border-[#262626] px-3 py-2.5 text-sm text-white placeholder-gray-600 outline-none resize-none h-16"
             />
-            <span className="absolute bottom-2 right-2 text-xs text-gray-600">0/200</span>
           </div>
         </div>
 
-        <div className="flex items-center justify-between pt-2">
+        <div className="flex items-center justify-between pt-1">
           <Switch className="data-[state=checked]:bg-violet-600" />
-          <span className="text-sm text-gray-400">Регулярный платёж</span>
+          <span className="text-sm text-gray-400">Подобрать с ипотекой</span>
         </div>
+
+        <Button className="w-full bg-violet-600 hover:bg-violet-700 text-white">
+          Записаться на показ
+        </Button>
       </div>
     </div>
   )
